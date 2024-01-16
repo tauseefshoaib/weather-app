@@ -1,5 +1,6 @@
 import lookup from "country-code-lookup";
-import { API_KEY } from "../env";
+
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 export const getBaseURL = (city) => {
   return `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;

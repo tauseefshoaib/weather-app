@@ -15,11 +15,6 @@ Here are some screenshots:
 
 
 
-
-<img width="1278" alt="Screenshot 2024-01-16 at 3 40 43 PM" src="https://github.com/tauseefshoaib/weather-app/assets/78302420/ac8aa498-ec51-4158-886c-7089d3a35c4b">
-
-
-
 <img width="291" alt="Screenshot 2024-01-16 at 3 41 07 PM" src="https://github.com/tauseefshoaib/weather-app/assets/78302420/2b1c04f0-15a3-4977-9153-822d0e6f282e">
 
 

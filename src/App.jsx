@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { convertMpsToKph, getBaseURL, getCountryName } from "./utils";
+import {
+  convertMpsToKph,
+  getBaseURL,
+  getCountryName,
+  getWeatherIcon,
+} from "./utils";
 
 function App() {
   const [location, setLocation] = useState("");
@@ -26,6 +31,8 @@ function App() {
     }
   };
 
+  console.log(data);
+
   return (
     <div className="flex flex-col h-screen w-screen justify-between items-center py-8  bg-slate-950">
       <input
@@ -39,12 +46,12 @@ function App() {
         <h1>{errorText}</h1>
       ) : (
         <>
-          <div className="flex flex-col justify-between items-center h-[80%]">
+          <div className="flex flex-col justify-evenly items-center h-[80%] md:h-[90%]">
             <div className="flex flex-col justify-between items-center">
-              <h1 className="text-xl md:text-3xl md:mt-2">{`📍 ${
+              <h1 className="text-xl md:text-3xl md:mt-2 ">{`📍 ${
                 data?.name
               }, ${getCountryName(data?.sys?.country)}`}</h1>
-              <h1 className=" text-8xl md:text-9xl mt-[150px] mb-6 md:mt-[150px]">
+              <h1 className=" text-8xl md:text-9xl mt-[150px] mb-6 md:mt-[100px]">
                 {`${data?.main?.temp?.toFixed(1)} °C`}
               </h1>
               <div className="flex flex-row justify-between items-center">
@@ -55,6 +62,11 @@ function App() {
                   1
                 )} °C`}</h1>
               </div>
+              {data.weather && (
+                <h1 className=" text-2xl md:text-4xl mt-[100px] mb-6 md:mt-[100px]">
+                  {`${getWeatherIcon(data?.weather[0]?.main)}`}
+                </h1>
+              )}
             </div>
           </div>
           <div className="flex flex-row justify-evenly items-center px-4 py-2 my-2 rounded-2xl bg-slate-400 w-[90%] md:w-[50%]">

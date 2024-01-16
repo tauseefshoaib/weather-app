@@ -32,3 +32,34 @@ export function getCountryName(code) {
   let countryData = lookup.byInternet(code);
   return countryData.country;
 }
+
+export function getWeatherIcon(weather) {
+  let icon = "";
+  switch (weather.toLowerCase()) {
+    case "clear sky":
+      icon = "⛅️";
+      break;
+    case "few clouds" || "scscattered clouds" || "broken clouds":
+      icon = "☁️";
+      break;
+    case "shower rain":
+      icon = "🌦️";
+      break;
+    case "rain":
+      icon = "🌧️";
+      break;
+    case "thunderstorm":
+      icon = "🌩️";
+      break;
+    case "snow":
+      icon = "❄️";
+      break;
+    case "mist":
+      icon = "🌫️";
+      break;
+    default:
+      icon = "☁️";
+  }
+
+  return `${icon} ${weather}`;
+}

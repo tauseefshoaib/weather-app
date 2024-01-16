@@ -41,7 +41,7 @@ function App() {
         <>
           <div className="flex flex-col justify-between items-center h-[80%]">
             <div className="flex flex-col justify-between items-center">
-              <h1 className="text-xl md:text-3xl">{`📍 ${
+              <h1 className="text-xl md:text-3xl md:mt-2">{`📍 ${
                 data?.name
               }, ${getCountryName(data?.sys?.country)}`}</h1>
               <h1 className=" text-8xl md:text-9xl mt-[150px] mb-6 md:mt-[150px]">

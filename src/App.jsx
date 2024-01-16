@@ -55,7 +55,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="flex flex-row justify-evenly items-center px-4 py-2 my-2 rounded-2xl bg-slate-400 w-[70%]">
+          <div className="flex flex-row justify-evenly items-center px-4 py-2 my-2 rounded-2xl bg-slate-400 w-[70%] md:w-[90%]">
             <div className="flex flex-col justify-between items-center ">
               <h1 className="text-2xl md:text-md">{`${data?.main?.feels_like?.toFixed(
                 1

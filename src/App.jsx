@@ -43,7 +43,9 @@ function App() {
         className="p-4 bg-slate-200 rounded-3xl h-10 w-[90%] md:w-[50%] text-slate-950  outline-none"
       />
       {data === undefined || data.cod === "404" ? (
-        <h1>{errorText}</h1>
+        <div className="flex h-[100%] justify-center items-center">
+          <h1 className="text-2xl md:text-4xl">{errorText}</h1>
+        </div>
       ) : (
         <>
           <div className="flex flex-col justify-evenly items-center h-[80%] md:h-[90%]">

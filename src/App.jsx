@@ -55,16 +55,16 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="flex flex-row justify-evenly items-center px-4 py-2 my-2 rounded-2xl bg-slate-400">
-            <div className="flex flex-col justify-between items-center mx-10">
+          <div className="flex flex-row justify-evenly items-center px-4 py-2 my-2 rounded-2xl bg-slate-400 w-[60%]">
+            <div className="flex flex-col justify-between items-center ">
               <h1>{`${data?.main?.feels_like?.toFixed(1)} °C`}</h1>
               <h1>Feels Like</h1>
             </div>
-            <div className="flex flex-col justify-between items-center mx-10">
+            <div className="flex flex-col justify-between items-center ">
               <h1>{`${data?.main?.humidity} %`}</h1>
               <h1>Humidity</h1>
             </div>
-            <div className="flex flex-col justify-between items-center mx-10">
+            <div className="flex flex-col justify-between items-center ">
               <h1>{`${convertMpsToKph(data?.wind?.speed)?.toFixed(
                 1
               )} km/h`}</h1>

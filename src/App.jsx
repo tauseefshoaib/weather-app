@@ -42,7 +42,7 @@ function App() {
           <div className="flex flex-col justify-between items-center h-[70%]">
             <div className="flex flex-col justify-between items-center">
               <h1>{`${data?.name}, ${getCountryName(data?.sys?.country)}`}</h1>
-              <h1 className="text-9xl mt-[100px] ">
+              <h1 className="text-9xl md:text-6xl mt-[100px] md:mt-[50px] ">
                 {`${data?.main?.temp?.toFixed(1)} °C`}
               </h1>
               <div className="flex flex-row justify-between items-center">
@@ -55,20 +55,22 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="flex flex-row justify-evenly items-center px-4 py-2 my-2 rounded-2xl bg-slate-400 w-[60%]">
+          <div className="flex flex-row justify-evenly items-center px-4 py-2 my-2 rounded-2xl bg-slate-400 w-[70%]">
             <div className="flex flex-col justify-between items-center ">
-              <h1>{`${data?.main?.feels_like?.toFixed(1)} °C`}</h1>
-              <h1>Feels Like</h1>
-            </div>
-            <div className="flex flex-col justify-between items-center ">
-              <h1>{`${data?.main?.humidity} %`}</h1>
-              <h1>Humidity</h1>
-            </div>
-            <div className="flex flex-col justify-between items-center ">
-              <h1>{`${convertMpsToKph(data?.wind?.speed)?.toFixed(
+              <h1 className="text-2xl md:text-xl">{`${data?.main?.feels_like?.toFixed(
                 1
-              )} km/h`}</h1>
-              <h1>Wind</h1>
+              )} °C`}</h1>
+              <h1 className="text-2xl md:text-xl">Feels Like</h1>
+            </div>
+            <div className="flex flex-col justify-between items-center ">
+              <h1 className="text-2xl md:text-xl">{`${data?.main?.humidity} %`}</h1>
+              <h1 className="text-2xl md:text-xl">Humidity</h1>
+            </div>
+            <div className="flex flex-col justify-between items-center ">
+              <h1 className="text-2xl md:text-xl">{`${convertMpsToKph(
+                data?.wind?.speed
+              )?.toFixed(1)} km/h`}</h1>
+              <h1 className="text-2xl md:text-xl">Wind</h1>
             </div>
           </div>
         </>
